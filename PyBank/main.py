@@ -35,7 +35,7 @@ with open(pybank_csv, 'r') as csvfile:
 
 
 # Calculate total months
-total_month = total_months + 1
+total_months = total_months + 1
 
 #Calculate change in profit
 profit_change = int(row[1]) - 1
@@ -57,10 +57,10 @@ for i in range(len(data) - 1):
     average_change = sum(changes)/len(changes)
 
 #Find the greatest increase in profits/losses
-greatest_increase = 
+greatest_increase = max(average_change)
 
 #Find the greatest decrease in profits/losses
-greatest_decrease = 
+greatest_decrease = min(average_change)
 
 #set format for printing
 output = (
