@@ -53,7 +53,7 @@ for row in data:
 
     if date not in checker:
         checker[date] = True
- print(len(checker.keys()))
+ print(len(checker.keys())
  print(total)
 
 changes = []
