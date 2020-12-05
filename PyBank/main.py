@@ -57,10 +57,10 @@ for i in range(len(data) - 1):
     average_change = sum(changes)/len(changes)
 
 #Find the greatest increase in profits/losses
-max
+greatest_increase = 
 
 #Find the greatest decrease in profits/losses
-min
+greatest_decrease = 
 
 #set format for printing
 output = (
