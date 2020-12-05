@@ -13,7 +13,8 @@ from collections import defaultdict
 #Path to csv data
 pypoll_csv = os.path.join('OneDrive', 'Desktop', 'python-challenge', 'PyPoll', 'Resources', 'pypoll.csv')
 
-#total_votes = 0
+#Define variables
+total_votes = 0
 candidate_votes = {}
 candidate_votes_percentage = {}
 combined_votes_percentage = defaultdict(list)
@@ -73,5 +74,5 @@ output = (
 
 #Output
 print(output)
-with open("analysis/output.txt")
-    txt_file'PyPoll
+with open("analysis/output.txt", "w") as txt_file:
+    txt_file.write(output)
