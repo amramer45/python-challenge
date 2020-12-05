@@ -32,7 +32,7 @@ with open(pybank_csv) as csvfile:
         net_total.append(int(row[1]))
 
 #Change in profits/losses
-for i in range(len(net_total)-1):
+for i in range(len(net_total) - 1):
 
     #Average change in profits/losses
     average_change.append(net_total[i + 1] - net_total[i])
