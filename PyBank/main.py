@@ -42,8 +42,8 @@ checker = {}
 total = 0
 for row in data:
     date = row[0]
-    profit/losses = row[1]
-    total = total + profit/losses
+    profit = row[1]
+    total = total + profit
 
     if date not in checker:
         checker[date] = True
@@ -58,7 +58,7 @@ for i in range(len(data) - 1):
 output = (
     f"Financial Analysis \n"
     f"------------------ \n"
-    f"Total Months: {total_votes} \n"
+    f"Total Months: {total_months} \n"
     f"Average Change: {average_change} \n"
     f"Greatest Increase in Profits: {greatest_increase} \n"
     f"Greatest Decrease in Profits: {greatest_decrease} \n"
