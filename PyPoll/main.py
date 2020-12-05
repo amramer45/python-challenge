@@ -63,13 +63,13 @@ winner_name = max(candidate_votes.items(), key=operator.itemgetter(1))[0]
 #set format for printing
 output = (
     f"Election Results \n"
-    f"------------------ \n"
+    f"--------------------------- \n"
     f"Total Votes: {total_votes}\n"
-    f"------------------ \n"
+    f"--------------------------- \n"
     f"{vote_res} \n"
-    f"------------------ \n"
+    f"--------------------------- \n"
     f"Winner {winner_name} \n"
-    f"------------------ \n"
+    f"--------------------------- \n"
 )
 
 #Output
