@@ -11,7 +11,7 @@ import operator
 from collections import defaultdict
 
 #Path to csv data
-pypoll_csv = os.path.join('OneDrive', 'Desktop', 'python-challenge', 'PyPoll', 'Resources', 'pypoll.csv')
+pypoll_csv = os.path.join('Resources', 'pypoll.csv')
 
 #Define variables
 total_votes = 0
