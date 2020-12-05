@@ -12,7 +12,7 @@ import csv
 #Path to collect data from the Resources folder
 pybank_csv = os.path.join('Resources', 'pybank.csv')
 
-total_months = []
+total_months = 0
 net_total = []
 average_change = []
 
@@ -25,11 +25,14 @@ with open(pybank_csv) as csvfile:
     #Skip the header
     header = next(csvreader)
 
-#Loop through the data
-for row in csvreader:
+    #Loop through the data
+    for row in csvreader:
 
-    total_months.append(row[0])
-    net_total.append(int(row[1]))
+        #total_months.append(row[0])
+        net_total.append(int(row[1]))
+
+#Calculate total months
+total_months = total_months + 1
 
 #Change in profits/losses
 for i in range(len(net_total)-1):
