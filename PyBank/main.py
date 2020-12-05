@@ -39,18 +39,21 @@ for i in range(len(net_total) - 1):
 
 #Greatest increase in profits/losses
 greatest_increase = max(average_change)
+greatest_increase_date = average_change.index(max(average_change)) + 1
 
 #Greatest decrease in profits/losses
 greatest_decrease = min(average_change)
+greatest_decrease_date = average_change.index(min(average_change)) + 1
 
 #set format for printing
 output = (
     f"Financial Analysis \n"
     f"------------------ \n"
     f"Total Months: {total_months} \n"
-    f"Average Change: {average_change} \n"
-    f"Greatest Increase in Profits: ($ {greatest_increase}) \n"
-    f"Greatest Decrease in Profits: ($ {greatest_decrease}) \n"
+    f"Total: ($ {net_total}) \n"
+    f"Average Change: ($ {average_change}) \n"
+    f"Greatest Increase in Profits: {total_months[greatest_increase_date]} ($ {greatest_increase}) \n"
+    f"Greatest Decrease in Profits: {total_months[greatest_decrease_date]} ($ {greatest_decrease}) \n"
 )
 
 #Output
