@@ -48,7 +48,7 @@ with open(pypoll_csv) as csvfile:
             else:
                 candidate_votes[name] += 1
 
-#Calculate the percentage of votes each candidate won and 
+#Calculate the percentage of votes each candidate won 
 candidate_votes_percentage = dict(candidate_votes)
 
 vote_res = " "
@@ -57,7 +57,7 @@ for key, value in candidate_votes_percentage.items():
     vote_res += key + ' ' + f'{vote_percentage:.3f}% ({value})\n'
 
 
-#Determine winner of the election 
+#Determine winner
 winner_name = max(candidate_votes.items(), key=operator.itemgetter(1))[0]
 
 #set format for printing
