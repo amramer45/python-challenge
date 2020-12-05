@@ -71,8 +71,8 @@ output = (
     f"Greatest Decrease in Profits: {greatest_decrease}
 )
 
-#Export text file
+#Output
 print(output)
-with open("analysis/output.txt")
-    txt_file
+with open("analysis/output.txt", "w") as txt_file:
+    txt_file.write(output)
 
