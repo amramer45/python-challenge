@@ -16,6 +16,8 @@ import csv
 #Path to collect data from the Resources folder
 pybank_csv = os.path.join('Resources', 'pybank.csv')
 
+net_total = 0
+total_months = 0
 
 data = []
 with open(pybank_csv, 'r') as csvfile:
@@ -36,7 +38,7 @@ with open(pybank_csv, 'r') as csvfile:
 total_month = total_months + 1
 
 #Calculate change in profit
-profit_change = int(row[1]) - previous_value
+profit_change = int(row[1]) - 1
 
 checker = {}
 total = 0
@@ -53,6 +55,12 @@ for i in range(len(data) - 1):
     changes.append(data[i][1] - data[i + 1][1])
 
     average_change = sum(changes)/len(changes)
+
+#Find the greatest increase in profits/losses
+max
+
+#Find the greatest decrease in profits/losses
+min
 
 #set format for printing
 output = (
