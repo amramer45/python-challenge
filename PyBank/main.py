@@ -49,7 +49,7 @@ greatest_decrease_date = average_change.index(min(average_change)) + 1
 output = (
     f"Financial Analysis \n"
     f"------------------ \n"
-    f"Total Months: {total_months} \n"
+    f"Total Months: {len(total_months)} \n"
     f"Total: ($ {sum(net_total)}) \n"
     f"Average Change: ($ {average_change}) \n"
     f"Greatest Increase in Profits: {total_months[greatest_increase_date]} ($ {greatest_increase}) \n"
