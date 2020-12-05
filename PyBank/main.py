@@ -9,17 +9,17 @@
 
 
 
-
 #Import necessary dependencies 
 import os
 import csv
 
 #Path to collect data from the Resources folder
-pybank_csv = os.path.join('OneDrive', 'Desktop', 'python-challenge', 'PyBank',  'Resources', 'pybank.csv')
+pybank_csv = os.path.join('Resources', 'pybank.csv')
 
 
 data = []
 with open(pybank_csv, 'r') as csvfile:
+    
     #Split the data on comas
     csvreader = csv.reader(csvfile, delimiter=',')
 
@@ -28,18 +28,12 @@ with open(pybank_csv, 'r') as csvfile:
     #Loop through the data
     for row in csvreader:
         date = row[0]
-        profit = int(row[1])
-        data.append([date, profit])
+        net_total = net_total + int(row[1])
+        data.append([date, net_total])
 
 
 # Calculate total months
 total_month = total_months + 1
-
-#Calculate the net total
-net_total = net_total + int(row[1])
-
-#Calculate the net total
-net_total = net_total + int(row[1])
 
 #Calculate change in profit
 profit_change = int(row[1]) - previous_value
@@ -48,18 +42,17 @@ checker = {}
 total = 0
 for row in data:
     date = row[0]
-    profit = row[1]
-    total = total + profit
+    profit/losses = row[1]
+    total = total + profit/losses
 
     if date not in checker:
         checker[date] = True
- print(len(checker.keys()
- print(total)
 
 changes = []
 for i in range(len(data) - 1):
     changes.append(data[i][1] - data[i + 1][1])
-print(sum(changes)/len(changes))
+
+    average_change = sum(changes)/len(changes)
 
 #set format for printing
 output = (
@@ -68,7 +61,7 @@ output = (
     f"Total Months: {total_votes} \n"
     f"Average Change: {average_change} \n"
     f"Greatest Increase in Profits: {greatest_increase} \n"
-    f"Greatest Decrease in Profits: {greatest_decrease}
+    f"Greatest Decrease in Profits: {greatest_decrease} \n"
 )
 
 #Output

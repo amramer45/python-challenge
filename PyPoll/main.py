@@ -17,7 +17,7 @@ pypoll_csv = os.path.join('Resources', 'pypoll.csv')
 total_votes = 0
 candidate_votes = {}
 candidate_votes_percentage = {}
-combined_votes_percentage = defaultdict(list)
+votes_percentage = defaultdict(list)
 candidates = []
 percentage = 0
 winner_name = []
@@ -49,12 +49,12 @@ with open(pypoll_csv) as csvfile:
                 candidate_votes[name] += 1
 
 #Calculate the percentage of votes each candidate won 
-candidate_votes_percentage = dict(candidate_votes)
+votes_percentage = dict(candidate_votes)
 
 vote_res = " "
-for key, value in candidate_votes_percentage.items():
-    vote_percentage = float(value)/float(total_votes) * 100
-    vote_res += key + ' ' + f'{vote_percentage:.3f}% ({value})\n'
+for key, value in votes_percentage.items():
+    percentage = float(value)/float(total_votes) * 100
+    vote_res += key + ' ' + f'{percentage:.3f}% ({value})\n'
 
 
 #Determine winner
@@ -64,7 +64,7 @@ winner_name = max(candidate_votes.items(), key=operator.itemgetter(1))[0]
 output = (
     f"Election Results \n"
     f"------------------ \n"
-    f"Total Votes: {total_votes} \n"
+    f"Total Votes: {total_votes}\n"
     f"------------------ \n"
     f"{vote_res} \n"
     f"------------------ \n"
